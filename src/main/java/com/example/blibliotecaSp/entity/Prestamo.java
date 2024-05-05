@@ -5,6 +5,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.security.Timestamp;
+import java.util.Date;
 
 @Entity
 @Data
@@ -15,7 +16,7 @@ public class Prestamo implements Serializable {
     @Column(name = "idPrestamo")
     private long idPrestamo;
     @Column(name = "fecha")
-    private Timestamp fecha;
+    private String fecha;
     @Column(name = "estado")
     private Character estado;
     @ManyToOne
