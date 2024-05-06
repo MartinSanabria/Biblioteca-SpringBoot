@@ -32,5 +32,13 @@ public class LibroService {
     public List<Libro> findByCategoria(String nombreEstado) {
         return libroRepository.findByCategoria(nombreEstado);
     }
+
+    public void activateBook(long id) {
+        libroRepository.activateBook(id);
+    }
+
+    public void deactivateBook(long id) {
+        libroRepository.deactivateBook(id);
+    }
 }
 
