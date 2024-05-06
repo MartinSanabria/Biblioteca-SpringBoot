@@ -39,4 +39,14 @@ public class LibroController {
         return libroService.findByCategoria(nombre);
     }
 
+    @DeleteMapping("/activate/{id}")
+    public void activateBook(@PathVariable("id") long id) {
+        libroService.activateBook(id);
+    }
+
+    @DeleteMapping("/deactivate/{id}")
+    public void deactivateBook(@PathVariable("id") long id) {
+        libroService.deactivateBook(id);
+    }
+
 }

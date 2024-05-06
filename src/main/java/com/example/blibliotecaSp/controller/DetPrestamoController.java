@@ -5,6 +5,9 @@ import com.example.blibliotecaSp.service.DetPrestamoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.data.jpa.repository.Modifying;
 import java.util.List;
 
 @RestController
@@ -35,8 +38,6 @@ public class DetPrestamoController {
 
     @DeleteMapping("/delete")
     public void eliminarPorIds(List<Long> idsAEliminar) {
-        for (Long id : idsAEliminar) {
-            detPrestamoService.delete(id);
-        }
+       detPrestamoService.eliminarPorIds(idsAEliminar);
     }
 }
